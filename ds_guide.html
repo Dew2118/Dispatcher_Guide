@@ -2,6 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <!-- bootstrap 4 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/stylesheet.css">
         <script type="text/javascript" src="./js/function.js"></script>
         <title>
@@ -22,158 +24,168 @@
         </div>
         <nav>
             <h3>
-                <a href='#dispatch overlay' class='nav'> Dispatch Overlay </a> &nbsp; <span class='border'></span>
-                &nbsp;&nbsp;<a href='#dispatch gui' class='nav'> Dispatch GUI </a> &nbsp; <span class='border'></span>
-                &nbsp;&nbsp;<a href='#dispatch priority' class='nav'> Dispatch Priority </a> &nbsp; <span class='border'></span>
-                &nbsp;&nbsp;<a href='#identify red signals' class='nav'> Identify Red Platform Starting Signal </a> &nbsp;<span class='border'></span>
-                &nbsp;&nbsp;<a href='#dispatch procedure' class='nav'> The Dispatch procedure </a>
+                <a href='#dispatch overlay' class='n_text'> Dispatch Overlay </a> &nbsp; <span class='border'></span>
+                &nbsp;&nbsp;<a href='#dispatch gui' class='n_text'> Dispatch GUI </a> &nbsp; <span class='border'></span>
+                &nbsp;&nbsp;<a href='#dispatch priority' class='n_text'> Dispatch Priority </a> &nbsp; <span class='border'></span>
+                &nbsp;&nbsp;<a href='#identify red signals' class='n_text'> Identify Red Platform Starting Signal </a> &nbsp;<span class='border'></span>
+                &nbsp;&nbsp;<a href='#dispatch procedure' class='n_text'> The Dispatch procedure </a>
             </h3>
         </nav>
-            <h3>
-                Now let's get into the actual guide.
-            </h3>
-        <div id='dispatch overlay'> <br><br>
-            <h2>
-                The Dispatch Overlay
-            </h2>
-            <img src='./images/dispatch_overlay.png' alt='a picture of dispatch overlay'>
-            <p>
-                <h3>
-                    The Dispatch Overlay is an overlay that shows information to a dispatcher. This overlay help him/her to see: <br><br>
-                    1.The Headcode of a train. <br><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp; Headcode is a four character indentifier for a train. <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp; The first digit shows the class of the train(which would be very important in the Dispatching priority), <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp; The letter represents the destination of the train, <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp; the last 2 digits represent the service number of the train which is not important to dispatchers. <br><br>
-                    2.The destination of a train
-                </h3>
-                <h3>
-                    3.The Status of a train.
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;Which could be: <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.Arriving <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.Loading <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.Ready <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.Departing <br>
-                </p>
-                    4.The time status of a train (how early or how delayed).<br><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;Also very important to dispatching priority.
-                </h3>
-            </p> 
-        </div>
-        <div id='dispatch gui'> <br><br>
-            <h2>
-                Dispatch GUI
-            </h2>
-            <img src='./images/dispatching_gui.png' alt='picure of dispatch gui'><br>
-            <p>
-                <h3>
-                    The dispatch gui is the place a Dispatcher execute his/her dispatching procedure. It has similar information to the Dispatching Overlay which include: <br><br>
-                    1.The platform number of the train <br><br>
-                    2.The Headcode <br><br>
-                    3.The destination of the train. <br><br>
-                    4.The time status of the train. <br><br>
-                    5.Dispatch Platforms
-                </h3>
-            </p>
-        </div>
-        <div id='dispatch priority'> <br><br>
-            <h2>
-                Dispatch priority
-            </h2>
-            <p>
-                <h3>
+        <h3>
+            Now let's get into the actual guide.
+        </h3>
+        <div class="row">
+            <div class='col split left'>
+                <div id='dispatch overlay'> <br><br>
+                    <h2>
+                        The Dispatch Overlay
+                    </h2>
+                    <img src='./images/dispatch_overlay.png' alt='a picture of dispatch overlay'>
                     <p>
-                        This is an extremely important part of a Dispatcher's job, regulate trains.
-                        There are 3 parts to the Dispatch priority: <br><br>
-                        1.Headcode <br><br>
-                        
-                        The table below shows the Headcorde Priority with 1 being the highest priority and 12 being the lowest priority.
-                    </p>
-                    <table border=True>
-                        <tr>
-                            <th> Description </th>
-                            <th> Late </th>
-                            <th> Ontime </th>
-                        </tr>
-                        <tr>
-                            <td> class 9 Express / Airlink train </td>
-                            <td> 1 </td>
-                            <td> 2 </td>
-                        </tr>
-                        <tr>
-                            <td> class 9 connect train </td>
-                            <td> 3 </td>
-                            <td> 4 </td>
-                        </tr>
-                        <tr>
-                            <td> class 1 Express / Airlink train </td>
-                            <td> 5 </td>
-                            <td> 6 </td>
-                        </tr>
-                        <tr>
-                            <td> class 1 Connect train </td>
-                            <td> 7 </td>
-                            <td> 8 </td>
-                        </tr>
-                        <tr>
-                            <td> class 2 Connect / Waterline train </td>
-                            <td> 9 </td>
-                            <td> 10 </td>
-                        </tr>
-                        <tr>
-                            <td> class 3 train </td>
-                            <td> 11 </td>
-                            <td> 11 </td>
-                        </tr>
-                    </table><br>
-                    2.Lateness
+                        <h3>
+                            The Dispatch Overlay is an overlay that shows information to a dispatcher. This overlay help him/her to see: <br><br>
+                            1.The Headcode of a train. <br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; Headcode is a four character indentifier for a train. <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; The first digit shows the class of the train(which would be very important in the Dispatching priority), <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; The letter represents the destination of the train, <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; the last 2 digits represent the service number of the train which is not important to dispatchers. <br><br>
+                            2.The destination of a train
+                        </h3>
+                        <h3>
+                            3.The Status of a train.
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Which could be: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.Arriving <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.Loading <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.Ready <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.Departing <br>
+                        </p>
+                            4.The time status of a train (how early or how delayed).<br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Also very important to dispatching priority.
+                        </h3>
+                    </p> 
+                </div>
+            </div>
+            <div class='col split left'>
+                <div id='dispatch gui' class='split left'> <br><br>
+                    <h2>
+                        Dispatch GUI
+                    </h2>
+                    <img src='./images/dispatching_gui.png' alt='picure of dispatch gui'><br>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;If multiple trains have the same Headcode priority, then the train that has more lateness have higher priority. <u> Regardless of the arrival order. </u>
+                        <h3>
+                            The dispatch gui is the place a Dispatcher execute his/her dispatching procedure. It has similar information to the Dispatching Overlay which include: <br><br>
+                            1.The platform number of the train <br><br>
+                            2.The Headcode <br><br>
+                            3.The destination of the train. <br><br>
+                            4.The time status of the train. <br><br>
+                            5.Dispatch Platforms
+                        </h3>
                     </p>
-                    3.Operator
+                </div>
+            </div>
+            <div class="w-100"></div>
+            <div class='col split right'>
+                <div id='dispatch priority'> <br><br>
+                    <h2>
+                        Dispatch priority
+                    </h2>
                     <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;If multiple trains have the same Headcode priority and the same Lateness priority then: <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Express > Airlink > Connect > Waterline
+                        <h3>
+                            <p>
+                                This is an extremely important part of a Dispatcher's job, regulate trains.
+                                There are 3 parts to the Dispatch priority: <br><br>
+                                1.Headcode <br><br>
+                                
+                                The table below shows the Headcorde Priority with 1 being the highest priority and 12 being the lowest priority.
+                            </p>
+                            <table border=True>
+                                <tr>
+                                    <th> Description </th>
+                                    <th> Late </th>
+                                    <th> Ontime </th>
+                                </tr>
+                                <tr>
+                                    <td> class 9 Express / Airlink train </td>
+                                    <td> 1 </td>
+                                    <td> 2 </td>
+                                </tr>
+                                <tr>
+                                    <td> class 9 connect train </td>
+                                    <td> 3 </td>
+                                    <td> 4 </td>
+                                </tr>
+                                <tr>
+                                    <td> class 1 Express / Airlink train </td>
+                                    <td> 5 </td>
+                                    <td> 6 </td>
+                                </tr>
+                                <tr>
+                                    <td> class 1 Connect train </td>
+                                    <td> 7 </td>
+                                    <td> 8 </td>
+                                </tr>
+                                <tr>
+                                    <td> class 2 Connect / Waterline train </td>
+                                    <td> 9 </td>
+                                    <td> 10 </td>
+                                </tr>
+                                <tr>
+                                    <td> class 3 train </td>
+                                    <td> 11 </td>
+                                    <td> 11 </td>
+                                </tr>
+                            </table><br>
+                            2.Lateness
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;If multiple trains have the same Headcode priority, then the train that has more lateness have higher priority. <u> Regardless of the arrival order. </u>
+                            </p>
+                            3.Operator
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;If multiple trains have the same Headcode priority and the same Lateness priority then: <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;Express > Airlink > Connect > Waterline
+                            </p>
+                            There is 1 exception. If a train come after a train has overshoot the signal or SPADed, then you MUST dispatch the overshoot or SPADed train first.
+                        </h3>
                     </p>
-                    There is 1 exception. If a train come after a train has overshoot the signal or SPADed, then you MUST dispatch the overshoot or SPADed train first.
-                </h3>
-            </p>
+                </div>
+            </div>
+            <div class='col split right'>  
+                <div id='identify red signals'> <br><br>
+                    <h2>
+                        Identify Red Platform Starting Signal
+                    </h2>
+                    <h3>
+                        <p>
+                            This is very important because if you mess this up you could ended up getting demoted.
+                        </p>
+                        <p>
+                            There are 3 main ways to check if a signal is red.<br>
+                            1.Look at the OFF indicator
+                        </p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<img src='./images/OFF.png' alt='a picture of illuminated OFF indicator' id='off'> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;illuminated -> not Red <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<img src='./images/un_off.png' alt='a picture of not illuminated OFF indicator' id='off'> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;not illuminated -> Red
+                        <p>
+                            2.Look at the Banner repeater
+                        </p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<img src='./images/banner.png' alt='a picture of horizontal banner repeater' id='bannerrepeater'> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;at 45 degrees -> not Red <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<img src='./images/un_banner.png' alt='a picture ofhorizontal banner repeater' id='bannerrepeater'> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;horizontally -> Red
+                        <p>
+                            3.Look at the Signal itself.
+                        </p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<img src='./images/singleyellow.png' alt='a picture of single yellow aspect' id='signal'><img src='./images/doubleyellow.png' alt='a picture of double yellow aspect' id='signal'><img src='./images/green.png' alt='a picture of green aspect'  id='signal'><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Showing a single yellow, double yellow or green aspect. -> not Red <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<img src='./images/red.png' alt='a picture of red aspect' id='signal'><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Showing a red aspect -> Red
+                    </h3>
+                </div>
+            </div>
         </div>
-        <div id='identify red signals'> <br><br>
-            <h2>
-                Identify Red Platform Starting Signal
-            </h2>
-            <h3>
-                <p>
-                    This is very important because if you mess this up you could ended up getting demoted.
-                </p>
-                <p>
-                    There are 3 main ways to check if a signal is red.<br>
-                    1.Look at the OFF indicator
-                </p>
-                &nbsp;&nbsp;&nbsp;&nbsp;<img src='./images/OFF.png' alt='a picture of illuminated OFF indicator' id='off'> <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;illuminated -> not Red <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<img src='./images/un_off.png' alt='a picture of not illuminated OFF indicator' id='off'> <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;not illuminated -> Red
-                <p>
-                    2.Look at the Banner repeater
-                </p>
-                &nbsp;&nbsp;&nbsp;&nbsp;<img src='./images/banner.png' alt='a picture of horizontal banner repeater' id='bannerrepeater'> <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;at 45 degrees -> not Red <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<img src='./images/un_banner.png' alt='a picture ofhorizontal banner repeater' id='bannerrepeater'> <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;horizontally -> Red
-                <p>
-                    3.Look at the Signal itself.
-                </p>
-                &nbsp;&nbsp;&nbsp;&nbsp;<img src='./images/singleyellow.png' alt='a picture of single yellow aspect' id='signal'><img src='./images/doubleyellow.png' alt='a picture of double yellow aspect' id='signal'><img src='./images/green.png' alt='a picture of green aspect'  id='signal'><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;Showing a single yellow, double yellow or green aspect. -> not Red <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<img src='./images/red.png' alt='a picture of red aspect' id='signal'><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;Showing a red aspect -> Red
-            </h3>
-            
-
-        </div>
+        <br>
         <div id='dispatch procedure'> <br><br>
             <h2>
                 The dispatch procedure
