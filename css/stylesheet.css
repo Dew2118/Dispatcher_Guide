@@ -16,15 +16,9 @@ body {
 #huge_image {
     height: 27%;
     width: 48%;
-    transition-property: width;
-	transition-duration: .5s;
-	transition-timing-function: linear;
 }
 img {
     width: 10%;
-    transition-property: width;
-	transition-duration: .5s;
-	transition-timing-function: linear;
 }
 h1 {
     text-align: center;
@@ -41,12 +35,6 @@ h3 {
 table {
     width: 50%;
   }
-#huge_image:hover,#huge_image:focus{
-    width:70%;
-}
-img:hover,img:focus{
-    width:20%;
-}
 nav {
     background-color: #333;
     position: fixed;
@@ -56,5 +44,7 @@ nav {
 }
 .nav {
     color: white;
-    
+}
+.border {
+    border-right: 3px solid white;
 }
