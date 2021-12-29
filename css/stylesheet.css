@@ -1,25 +1,49 @@
 body {
-    background: linear-gradient(#a0fa4b 0%,#e1f5f3 100%);}
+    background: linear-gradient(#a0fa4b 0%,#e1f5f3 100%);
+}
 #signal {
-    width: 60px;
-    height: 80px;
+    width: 3%;
+    height: 4%;
 }
 #bannerrepeater {
-    height: 60px;
-    width: 60px;
+    height: 6%;
+    width: 6%;
 }
 #off {
-    height: 50px;
-    width: 100px;
+    height: 5%;
+    width: 10%;
 }
 #huge_image {
-    height: 270px;
-    width: 480px;
+    height: 27%;
+    width: 48%;
+    transition-property: width;
+	transition-duration: .5s;
+	transition-timing-function: linear;
+}
+img {
+    width: 10%;
+    transition-property: width;
+	transition-duration: .5s;
+	transition-timing-function: linear;
 }
 h1 {
     text-align: center;
+    font-size: 250%;
 }
 h2 {
     text-align: center;
     text-decoration: underline;
+    font-size:200%vw;
+}
+h3 {
+    font-size: 150%vw;
+}
+table {
+    width: 50%;
+  }
+#huge_image:hover,#huge_image:focus{
+    width:70%;
+}
+img:hover,img:focus{
+    width:20%;
 }
