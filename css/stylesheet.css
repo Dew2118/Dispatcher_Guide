@@ -1,0 +1,25 @@
+body {
+    background: linear-gradient(#a0fa4b 0%,#e1f5f3 100%);}
+#signal {
+    width: 60px;
+    height: 80px;
+}
+#bannerrepeater {
+    height: 60px;
+    width: 60px;
+}
+#off {
+    height: 50px;
+    width: 100px;
+}
+#huge_image {
+    height: 270px;
+    width: 480px;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
