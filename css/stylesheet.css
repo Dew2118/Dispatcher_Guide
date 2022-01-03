@@ -43,8 +43,7 @@ table {
 .n_text {
     font-size: 80%;
     color: white;
-    
+}   
+.black-border-table td, .black-border-table th{
+    border-color: black;
 }
-/* .border {
-    border-right: 3px solid white;
-} */
